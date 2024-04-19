@@ -3,21 +3,26 @@
 
 using namespace std;
 
+// main function
 int main()
 {
+    const int screen_height = 800;
+    const int screen_width = 1600;
 
-    const int window_height = 800;
-    const int window_width = 1280;
+    const int paddle_height = 180;
+    const int paddle_width = 30;
 
-    InitWindow(window_width, window_height, "raylib [core] example - basic window");
+    InitWindow(screen_width, screen_height, "Raylib example basic window");
     SetTargetFPS(60);
 
     while (WindowShouldClose() == false)
     {
         BeginDrawing();
-        // ClearBackground(RAYWHITE);
-        // DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-        DrawCircle(190, 200, 20, GREEN);
+
+        DrawCircle(screen_width / 2, screen_height / 2, 20, GREEN);
+
+        DrawRectangle(10, screen_height / 2 - paddle_height / 2, 25, 160, WHITE);
+        DrawRectangle(screen_width - 35, screen_height / 2 - paddle_height / 2, 25, 160, WHITE);
 
         EndDrawing();
     }
