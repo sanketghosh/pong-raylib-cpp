@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #141414;
+  --light: #fff;
+  --jersey: "Jersey 10", sans-serif;
+  --normalFont: sans-serif;
+}
+
+body {
+  font-family: var(--jersey);
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+li,
+a {
+  list-style: none;
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.main__container {
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container h1 {
+  font-size: 7.5rem;
+  text-align: center;
+}
+
+.container p {
+  font-size: 1rem;
+  font-family: var(--normalFont);
+  font-weight: 500;
+  text-align: center;
+}
+
+.play__btn {
+  padding: 5px 20px;
+  font-size: 2.5rem;
+  font-family: var(--jersey);
+  background: transparent;
+  color: var(--light);
+  border: 3px solid var(--light);
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.play__btn:hover {
+  opacity: 70%;
+}
+
+@media screen and (max-width: 640px) {
+  .container h1 {
+    font-size: 5.5rem;
+  }
+  .play__btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container h1 {
+    font-size: 6.75rem;
+  }
+  .play__btn {
+    font-size: 1.75rem;
+  }
+}
